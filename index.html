@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Navin Abraham</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #334155;
+  }
+
+  header {
+    background: #60a5fa;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  nav {
+    margin-top: 30px;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s border-bottom-color 0.3s;
+    border-bottom: 2px solid transparent; /* invisible underline by default */
+    padding-bottom: 2px; /* spacing between text and underline */
+  }
+
+  nav a:hover {
+    opacity: 0.75;
+    border-bottom-color: white;
+  }
+
+  section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scroll-margin-top: 0;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2563eb;
+    position: relative;
+  }
+
+  section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #60a5fa;
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgb(96 165 250 / 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgb(96 165 250 / 0.5);
+  }
+
+  .project-card h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+  }
+
+  .project-card p {
+    color: #475569;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact a {
+    display: inline-block;
+    margin: 10px 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2563eb;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .contact a:hover {
+    border-color: #60a5fa;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="fade-in" style="animation-delay: 0.2s;">Navin Abraham</h1>
+  <p class="fade-in" style="animation-delay: 0.4s;">I am a customer-focused leader with a background in tech, troubleshooting, and team management, now driven to build a career in IT and cybersecurity.</p>
+  
+  <nav class="fade-in" style="animation-delay: 0.6s;">
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT ME</a>
+  </nav>
+
+  
+</header>
+
+<section id="about" class="fade-in about" style="animation-delay: 0.8s;">
+  <div>
+    <h2>About Me</h2>
+    <p class="about-text">I’m passionate about creating practical solutions — whether it’s a responsive website, a seamless customer experience, or a reliable IT system. I love bringing ideas to life through smart problem-solving and thoughtful, user-focused design. With a background in leadership, customer service, and IT troubleshooting, I blend technical skills with a people-first approach. My goal is to keep growing in IT and cybersecurity, building solutions that are efficient, reliable, and make a real difference.</p>
+  </div>
+</section>
+
+<section id="projects" class="fade-in projects" style="animation-delay: 1s;">
+  <div>
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Proxmox Home Server</h3>
+        <p>Repurposed an old PC's hardware and made it a home server using Proxmox.</p>
+      </div>
+      <div class="project-card">
+        <h3>PiHole Ad Blocker</h3>
+        <p>Programmed a Rasberry Pi board and used PiHole to block ads from my home network.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>My own personal website built with modern HTML, CSS, and a sprinkle of JavaScript animations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade-in contact" style="animation-delay: 1.2s;">
+  <div>
+    <h2>Get In Touch</h2>
+    <a href="mailto:you@example.com">abrahamnavin7@gmail.com</a>
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Navin — Built with ❤️ and code
+</footer>
+
+</body>
+</html>
